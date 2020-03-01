@@ -399,7 +399,7 @@ model %&gt;%
 <pre class="r"><code>model %&gt;% compile(optimizer=&#39;adam&#39;,
                   loss=&#39;sparse_categorical_crossentropy&#39;,
                   metrics=c(&#39;accuracy&#39;))</code></pre>
-<p>With all of this set up, we are finally able to train our neural network. The “epochs” option determine how many cycles we let the network train upon. Here, we will train the network for 50 epochs. However, after 25 epochs, we notice the performance of the network degrading on the validation dataset, which is potentially caused by overfitting. Twenty fice epochs should be sufficient for getting a network that performs well. We can obtain metrics such as accuracy and loss while the netowkr is training; this option can be turned off by setting the keyword argument <strong>verbose=FALSE</strong>.</p>
+<p>With all of this set up, we are finally able to train our neural network. The “epochs” option determine how many cycles we let the network train upon. Here, we will train the network for 50 epochs. However, after 25 epochs, we notice the performance of the network degrading on the validation dataset, which is potentially caused by overfitting. Twenty five epochs should be sufficient for getting a network that performs well. We can obtain metrics such as accuracy and loss while the network is training; this option can be turned off by setting the keyword argument <strong>view_metrics=FALSE</strong>.</p>
 <pre class="r"><code>epochs &lt;- 50
 history &lt;- model %&gt;% fit(train_images, train_labels,
                          epochs=epochs,
@@ -412,7 +412,7 @@ history &lt;- model %&gt;% fit(train_images, train_labels,
 <p>After training the model, we can make some predictions with the set of test images (i.e., the model predicts the label for each image in correspondence to the 10 classes we had previously outlined). The highest value in the output distribution is what tells us what the model’s prediction is.</p>
 <pre class="r"><code>prediction &lt;- model %&gt;% predict_classes(test_images)
 prediction[1:20]</code></pre>
-<pre><code>##  [1] 9 2 1 1 6 1 4 6 5 7 4 5 7 3 4 1 2 2 8 0</code></pre>
+<pre><code>##  [1] 9 2 1 1 6 1 4 6 5 7 4 5 5 3 2 1 2 2 8 0</code></pre>
 <pre class="r"><code>test_labels[1:20]</code></pre>
 <pre><code>##  [1] 9 2 1 1 6 1 4 6 5 7 4 5 7 3 4 1 2 4 8 0</code></pre>
 <p>For our last trick, we show the prediction results from a subset of the data visually. Correct predictions will show up with green text and wrong predictions will be shown with red text.</p>

@@ -1,0 +1,23 @@
+/* Whole document font family and font size */
+body {
+	font-family: Helvetica;
+	font-size: 14pt;
+}
+
+/* Headers are titles */
+h1, h2, h3, h4, h5, h6 {
+	font-size: 24pt;
+}
+
+.medium {
+	width: 60px !important;
+}
+
+img {
+    width: 40px;
+	padding: 10px;
+}
+
+.linked-in {
+	  width: 50px !important;
+}

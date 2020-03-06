@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>about.utf8</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="learning.html">Learning</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><img style="width: 120px;" src="logo.png"></p>
+<div id="life" class="section level2">
+<h2><strong>Life</strong></h2>
+<div id="personal-information" class="section level3">
+<h3>Personal information</h3>
+<p>My name is Flaviu Vadan. I was born and raised in Romania and I moved to Saskatoon, SK, Canada, in 2013. I started attending the University of Saskatchewan in 2014, as I worked for one year after I moved to SK. In my spare time, I enjoy developing software, reading, and triathlon training. I have only discovered the fun and joy in developing software after I started university but my love of computers goes way back to the times I messed around with registries on Windows and disassembled and reassembled my home computer because I was interested in its hardware components. I have not been an avid reader for my whole life but I started picking up books more and more often starting with 2013 and reading is now an important part of my life. I have loved biking my whole life, discovered running is fun and thought “Might as well try swimming…”. I was hooked ever since and have taken up triathlon as part of my life as well.</p>
+<p><br />
+</p>
+</div>
+</div>
+<div id="education" class="section level2">
+<h2><strong>Education</strong></h2>
+<div id="some-direction" class="section level3">
+<h3>Some direction</h3>
+<p>I started studying at the University of Saskatchewan in 2014. I initially wanted to pursue Computer Engineering but, due to the differences between the educational systems of Romania and Canada, I was not able to apply directly to enter the College of Engineering at the University of Saskatchewan. Due to this event, I had to take an additional year, with a reduced course load, to establish some academic history in SK. Once that year passed, I started studying Computer Science. Studying Computer Science is filled with fun and challenges and the way it makes one think (in algorithms) can be a life-changing experience. In my third year I took a science elective that changed my course again. I took Organic Chemistry and I was impressed by how specific chemical interactions can be. I did not want to give up Computer Science and I did not want to pursue Chemistry exclusively - I took up Bioinformatics.</p>
+<p><br />
+</p>
+</div>
+</div>
+<div id="career" class="section level2">
+<h2><strong>Career</strong></h2>
+<div id="experience" class="section level3">
+<h3>Experience</h3>
+<p>I held several positions throughout my life, so far, and they have all been experiences that I learned a lot from. However, as an overview, the most rewarding life and career-influencing positions I have held are research positions and the internship I have finished at Vendasta. I first worked with a Computer Science professor on performing sentiment analysis on 19th century sermons using different machine learning classifiers that were trained on positive and negative 20/21st century movie reviews. That work was a collaboration with the Department of History at the University of Saskatchewan. I have also performed a second study during this tenure, which was focused on performing human behavioral data analysis from the perspective of dimensionality of the collected data. The second research position was in Bioinformatics performing an analysis of different DNA motif-finding tools as the first part of my project. Part of that analysis was using the motif finders to attempt to identity cis and trans chromosomal interactions and generate visual representations of them. The second part of the project was using a motif finder of choice and attempt to improve its results by pre-processing analyzed genes to fit them in topologically-associated domains (the interacting chromosomes’ regions).</p>
+<p><br />
+</p>
+</div>
+</div>
+<div id="work-experience" class="section level2 tabset tabset-fade tabset-pills">
+<h2><strong>Work experience</strong></h2>
+<div id="research-assistant-0516-0916" class="section level3">
+<h3>Research Assistant (05/16-09/16)</h3>
+<p>This was the first research position I have ever held. I worked on using the <a href="https://en.wikipedia.org/wiki/Minkowski%E2%80%93Bouligand_dimension">Minkowski-Bouligand dimension</a> to estimate the dimensionality of a dataset. The research was fun because I was doing this after my first year in Computer Science and I had, frankly, no idea what I was doing. I used an n-dimensional tree that I wrote myself with feedback from an algorithms professor on the insertion method of the tree. I didn’t even know that what I was looking for was effectively an m-ary tree but, hey, I figured it out and learned a whole lot in the process! The paper can be found <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0218966">here</a> while the poster is <a href="https://www.researchgate.net/publication/320163386_Intrinsic_Dimensionality_and_Cross-Correlation_of_Human_Behavioural_Data">here</a>.</p>
+<p>I learned a lot about Statistics, Information Theory, and some Machine Learning topics during that summer. Another project that I worked on for a bit was sentiment analysis on 16th to 19th century sermons. As far as I remember, this was in collaboration with the Department of History and Department of English.</p>
+</div>
+<div id="student-assistant-multi-term" class="section level3">
+<h3>Student Assistant (multi-term)</h3>
+<p>I marked assignments/quizzes and midterms for:</p>
+<ul>
+<li>MATH123 - Calculus I for Engineers</li>
+<li>MATH124 - Calculus II for Engineers</li>
+<li>MATH100 - Introductory Mathematics for Education students</li>
+</ul>
+<p>It’s unfortunate that I had to follow the marking guideline handed to me by instructors… there were so many creative students attempting to solve a problem in interesting ways. While their solution was.. non-sense, some drawing of them crying, or some drawing of a Tesla (this was great), I always wanted to leave encouragement messages and hand out partial marks.</p>
+</div>
+<div id="research-assistant-0517-0917" class="section level3">
+<h3>Research Assistant (05/17-09/17)</h3>
+<p>This was the second research assistant position I held. This one was pretty special as it was the first time I was working in Bioinformatics after transferring from Computer Science (same department though so not much of a change). I worked on incorporating <a href="https://en.wikipedia.org/wiki/Topologically_associating_domain">topologically associated domains</a> (TADs) into <a href="https://en.wikipedia.org/wiki/Sequence_motif">motif</a> discovery tools like Clover directed by the hypothesis that incorporating TADs into motif discovery tools will increase their accuracy. It did! But it wasn’t a drastic improvement.. For now, there’s a <a href="https://www.researchgate.net/publication/320163161_Leveraging_3D_Genomic_Information_for_Identifying_Transcription_Factor_Binding_Motifs">poster</a> on this. I also worked on comparing database-oriented and <em>de novo</em> motif finders, which is a paper the group is currently polishing before submission!</p>
+</div>
+<div id="tutorial-leader---bioinformatics-multi-term" class="section level3">
+<h3>Tutorial Leader - Bioinformatics (multi-term)</h3>
+<p>Ah, this one was always fun. I worked as a tutorial leader for BINF200 - Introduction to Bioinformatics - and BINF210 - Introduction to Bioinformatics Applications. BINF200 is the course for students in Bioinformatics as it involves scripting in Bash and Python while BINF210 is the applications course for people who want to use Bioinformatics tools but do not want to engineer one.</p>
+</div>
+<div id="software-developer-intern-0518-0919" class="section level3">
+<h3>Software Developer Intern (05/18-09/19)</h3>
+<p>This was one of the best experiences I have ever had. The company, the people, my team, everything was awesome! I worked on two products - a task management system and a website-hosting platform. The task management system had a Python and Golang backend with a KnockoutJS and Angular frontend. The product was hosted on the Google Cloud Platform (GCP) using AppEngine and the Google Kubernetes Engine (GKE). The website-hosting platform was a WordPress-hosting engine built on GCP and GKE and used technologies such as NGINX (serving requests), Redis (caching), Golang and Python (backend), Angular (frontnd), PHP and PHP-CGI (website files compilation), etc - a lot of stuff used by that one. I gained a lot of experience building production-level systems, working with others in a team, understanding customers, etc. I wrote a <a href="https://medium.com/vendasta/software-development-internship-reflections-d9141bac6a9f">Medium blog</a> about my experience!</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
